@@ -32,6 +32,10 @@ pipeline {
                 }
             }
         }
-        
+        stage('Build Docker Image') {
+            steps {
+                bat 'docker build -t my-app:1.1 .'
+            }
+        }
     }
 }
